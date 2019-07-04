@@ -1,13 +1,3 @@
-"""
-This project lets you explore data's of travelers from Three different cities,"Chicago, New York City and Washington".
-I was able to successfully complete this project by studying similar projects online.
-The sites I visited was;
-1. https://zhuanlan.zhihu.com/p/54676480
-2. https://github.com/ozlerhakan/bikeshare/blob/master/bikeshare.py
-3. https://stackoverflow.com/questions/49631555/filtering-a-dataframe-using-user-input
-4. https://repl.it/@vanessaejikeme/GoodAssuredIrc
-5. https://repl.it/@MichaelCoffin/DarksalmonTheseBinarysearchtree
-"""
 
 import time
 import pandas as pd
@@ -32,15 +22,15 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-    
+
     while True:
         city = input('\nWhich city Would you want to explore?\n Chicago, New York City, or Washington?\n').lower()
         if city not in Cities:
              print("Please choose either from Chicago, New York City, or Washington")
-        else:              
+        else:
            break
 
-    # TO DO: get user input for month (all, january, february, ... , june)   
+    # TO DO: get user input for month (all, january, february, ... , june)
     while True:
         month = input('\nWhich of these months would you want to see?\n all, january, february, ... , june?\n').lower()
         try:
@@ -89,7 +79,7 @@ def load_data(city, month, day):
     # filter by month if applicable
     if month != 'all':
         # use the index of the months list to get the corresponding int
-        
+
         months = ['january', 'february', 'march', 'april', 'may', 'june']
         month = months.index(month) + 1
 
@@ -114,7 +104,7 @@ def time_stats(df):
     # TO DO: display the most common month
     print('*' * 40 )
     print('\n The most common month: {} \n'.format(df['month'].mode()))
-    
+
     # TO DO: display the most common day of week
     print('\n The most common dat of week: {} \n'.format(df['day_of_week'].mode()))
 
@@ -152,7 +142,7 @@ def trip_duration_stats(df):
 
     # TO DO: display total travel time
     print('\n The total travel time: {} \n '.format(df['Trip Duration'].sum()))
-   
+
     # TO DO: display mean travel time
     print('\n The mean travel time: {} \n'.format(df['Trip Duration'].mean()))
 
@@ -197,7 +187,7 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
-        
+
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
