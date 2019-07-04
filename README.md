@@ -8,7 +8,7 @@ The project title is, "Explore US Bikeshare Data".
 The project made use of Python to explore data related to bike share from three cities, "Chicago, New York City and Washington".
 
 ### Files used
-In order to complete this project, I wrote a Python script named bikeshare.py, I also used the three city dataset files. The names of the dataset are, "chicago.csv, new_york_city.csv, washington.csv"
+In order to complete this project, I used a Python script named bikeshare.py, I also used the three city dataset files. The dataset used was provided by a bikeshare company named Motiva. 
 
 ### Credits
 I gained better understanding by reading other peoples project. The websites I viewed is listed below;
